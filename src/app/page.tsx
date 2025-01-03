@@ -1,14 +1,11 @@
-import BlogPost from "@/components/Blog";
+import Categories from "@/components/Categories";
 import Hero from "@/components/Hero";
-import React from "react";
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
       <Hero />
-      <BlogPost />
+      <Categories />
     </div>
   );
-};
-
-export default Home;
+}

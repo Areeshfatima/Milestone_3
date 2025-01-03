@@ -1,60 +1,76 @@
-import Link from "next/link";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaGithub,
-} from "react-icons/fa";
+import React from "react";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4 mt-10">
-      <div className="container mx-auto text-center">
-        <p className="mb-2">&copy; 2025 All Rights Reserved by Arishfa</p>
-        <div className="flex justify-center space-x-4">
-          <Link
-            href="https://www.facebook.com"
+    <footer className="bg-gray-900 text-gray-300 py-8">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Top Section */}
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-yellow-500">
+            Flavor Haven by <span className="text-red-500">Arisha</span>
+          </h1>
+          <p className="mt-4 text-lg">
+            Serving love and flavor on every plate. Follow us for the latest
+            updates!
+          </p>
+        </div>
+
+        {/* Social Links */}
+        <div className="mt-6 flex justify-center space-x-6">
+          <a
+            href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition"
+            className="text-yellow-500 hover:text-red-500 text-2xl"
+            aria-label="Facebook"
           >
-            <FaFacebookF size={20} />
-          </Link>
-          <Link
-            href="https://www.twitter.com"
+            <FaFacebook />
+          </a>
+          <a
+            href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
+            className="text-yellow-500 hover:text-red-500 text-2xl"
+            aria-label="Instagram"
           >
-            <FaTwitter size={20} />
-          </Link>
-          <Link
-            href="https://www.instagram.com"
+            <FaInstagram />
+          </a>
+          <a
+            href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 transition"
+            className="text-yellow-500 hover:text-red-500 text-2xl"
+            aria-label="Twitter"
           >
-            <FaInstagram size={20} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com"
+            <FaTwitter />
+          </a>
+          <a
+            href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-600 transition"
+            className="text-yellow-500 hover:text-red-500 text-2xl"
+            aria-label="YouTube"
           >
-            <FaLinkedinIn size={20} />
-          </Link>
-          <Link
-            href="https://www.github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-400 transition"
-          >
-            <FaGithub size={20} />
-          </Link>
+            <FaYoutube />
+          </a>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-8 border-t border-gray-700 pt-4 text-center">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()}{" "}
+            <span className="text-yellow-500">Flavor Haven</span>. All Rights
+            Reserved.
+          </p>
+          <p className="text-sm mt-2">
+            Designed with ❤️ by{" "}
+            <span className="text-red-500 font-semibold">Arisha</span>.
+          </p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
